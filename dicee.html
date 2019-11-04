@@ -1,58 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Dicee</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
 
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Dicee</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
 
-    <div class="container">
-      <h1>Refresh Me</h1>
+</head>
 
-      <div class="dice">
-        <p>Jogador 1</p>
-        <img class="img1" src="images/dice6.png">
-      </div>
+<body>
 
-      <div class="dice">
-        <p>Jogador 2</p>
-        <img class="img2" src="images/dice6.png">
-      </div>
+  <div class="container">
+    <h1>Refresh Me</h1>
 
+    <div class="dice">
+      <p>Jogador 1</p>
+      <img class="img1" src="images/dice6.png">
     </div>
 
-    <script src="index.js">
-    </script>
+    <div class="dice">
+      <p>Jogador 2</p>
+      <img class="img2" src="images/dice6.png">
+    </div>
 
-    <script>
-      let img1 = document.getElementsByClassName('img1')[0];
-      let img2 = document.getElementsByClassName('img2')[0];
+  </div>
 
-      let img1Value = randomNumber();
-      let img2Value = randomNumber();
+  <script src="index.js">
+  </script>
+</body>
 
-      function randImgPath(number) {
-        return 'images/dice' + number + '.png';
-      }
+<footer>
+  gleyconxavier 🎲 github 🎲 io
+</footer>
 
-      img1.setAttribute("src", randImgPath(img1Value));
-      img2.setAttribute("src", randImgPath(img2Value));
-
-      if ( img1Value > img2Value ) {
-        document.querySelector('h1').innerHTML = 'Jogador 1 Venceu!';
-      } else if ( img2Value > img1Value ) {
-        document.querySelector('h1').innerHTML = 'Jogador 2 Venceu!';
-      } else {
-        document.querySelector('h1').innerHTML = 'Empate :(';
-      }
-
-      </script>
-  </body>
-
-  <footer>
-    gleyconxavier 🎲 github 🎲 io
-  </footer>
 </html>
